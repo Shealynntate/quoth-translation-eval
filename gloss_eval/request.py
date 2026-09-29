@@ -1,7 +1,7 @@
 """The request the app sends for one lookup: its user turn and its forced tool.
 
-The system prompt, the two shape clauses, the earlier-passage line and the tool schema are read
-from `prompt/` rather than written here, so those files are the single record of what is asked.
+The system prompt, the shape clauses, the earlier-passage line and the tool schema are read from
+`prompt/` rather than written here, so those files are the single record of what is asked.
 """
 
 from __future__ import annotations
@@ -46,8 +46,9 @@ SECOND_CLITICS = {
 HABER_WITH_PRONOUN = re.compile(
     r"(haber|habér|habiendo|habiéndo)(me|te|se|nos|os|lo|la|le|los|las|les){1,2}")
 
-#: A word is a maximal run of letters; digits, punctuation and spaces separate words.
-WORD_RUN = re.compile(r"[^\W\d_]+")
+#: The two zero-width joiners. Like a combining mark, each joins the character before it into one
+#: character as a reader sees it.
+JOINERS = frozenset(("\u200c", "\u200d"))
 
 
 @cache
@@ -63,6 +64,12 @@ def clitic_clause() -> str:
 @cache
 def haber_clause() -> str:
     return paths.HABER_TURN.read_text(encoding="utf-8")
+
+
+@cache
+def single_word_clause() -> str:
+    """The clause the app sends for a plain single word, from version 1.0.1 on."""
+    return paths.SINGLE_WORD_TURN.read_text(encoding="utf-8")
 
 
 @cache
@@ -119,13 +126,43 @@ def is_enclitic_auxiliary(selection: str) -> bool:
     return HABER_WITH_PRONOUN.fullmatch(word) is not None
 
 
+def word_count(selection: str) -> int:
+    """How many words `selection` holds, counted the way the app counts words.
+
+    A word is a maximal run of characters that hold a letter or a combining mark, where a mark
+    and a joiner belong to the character before them. So "fría" with its accent typed as a
+    combining mark is one word, and digits, punctuation and spaces separate words.
+    """
+    clusters: list[bool] = []
+    for ch in selection:
+        if clusters and (ch in JOINERS or unicodedata.category(ch).startswith("M")):
+            clusters[-1] = clusters[-1] or unicodedata.category(ch)[0] in "LM"
+        else:
+            clusters.append(unicodedata.category(ch)[0] in "LM")
+    count, in_word = 0, False
+    for letter in clusters:
+        if letter and not in_word:
+            count += 1
+        in_word = letter
+    return count
+
+
 def is_single_token_lookup(selection: str) -> bool:
     """True when `selection` is at most one word, counted the way the app counts words."""
-    return len(WORD_RUN.findall(selection)) <= 1
+    return word_count(selection) <= 1
+
+
+def is_plain_single_word(selection: str) -> bool:
+    """True when `selection` is exactly one word and neither shape another clause speaks to: not
+    haber with a pronoun attached, and not a pronoun-plus-verb span. It decides whether the user
+    turn carries a single-word clause, so no request ever carries two shape clauses."""
+    return (word_count(selection) == 1
+            and not is_enclitic_auxiliary(selection)
+            and not is_clitic_verb_candidate(selection))
 
 
 def user_turn(selection: str, sentence: str, earlier: str | None = None,
-              with_haber_clause: bool = True) -> str:
+              with_haber_clause: bool = True, single_word: str | None = None) -> str:
     """The user turn for `selection` in `sentence`, curly quotes included.
 
     Its lines, in order:
@@ -133,9 +170,12 @@ def user_turn(selection: str, sentence: str, earlier: str | None = None,
     1. The instruction naming the selection.
     2. At most one shape clause. The clitic clause, for a pronoun-plus-verb span, tells the model
        to treat the span as one verb. The haber clause, for a single word made of haber and an
-       attached pronoun, tells it to leave out the participle that follows. The two shapes cannot
-       both hold. `with_haber_clause=False` builds the turn without the haber clause, so an
-       experiment can measure what the clause adds.
+       attached pronoun, tells it to leave out the participle that follows. A single-word clause,
+       for any other single word, is sent only when `single_word` is given, and it is that text:
+       experiments 1 and 2 measured the request as it stood before the app sent one, and
+       experiment 3 compares several. The shapes cannot overlap. `with_haber_clause=False`
+       builds the turn without the haber clause, so an experiment can measure what the clause
+       adds.
     3. The sentence, as given (marked or not), unless it is just the selection again.
     4. The passage before the sentence, only for a single-word selection. A lone word often has
        too little in its own sentence to settle its sense. A multi-word span never carries one:
@@ -149,6 +189,8 @@ def user_turn(selection: str, sentence: str, earlier: str | None = None,
         turn += "\n" + clitic_clause()
     if with_haber_clause and is_enclitic_auxiliary(selection):
         turn += "\n" + haber_clause()
+    if single_word and is_plain_single_word(selection):
+        turn += "\n" + single_word
     if sentence and sentence != selection:
         turn += f"\nIt appears in this sentence: “{sentence}”"
     if earlier and is_single_token_lookup(selection):
@@ -157,5 +199,6 @@ def user_turn(selection: str, sentence: str, earlier: str | None = None,
 
 
 def marked_turn(selection: str, sentence: str, earlier: str | None = None,
-                with_haber_clause: bool = True) -> str:
-    return user_turn(selection, mark_span(sentence, selection), earlier, with_haber_clause)
+                with_haber_clause: bool = True, single_word: str | None = None) -> str:
+    return user_turn(selection, mark_span(sentence, selection), earlier, with_haber_clause,
+                     single_word)

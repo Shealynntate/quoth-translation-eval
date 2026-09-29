@@ -1,0 +1,66 @@
+{
+  "command": null,
+  "experiment": "phrases",
+  "model": "claude-haiku-4-5-20251001",
+  "trials": 5,
+  "cases_file": "cases/phrases.json",
+  "cases_sha256": "23874cea781701eca2fc90e52b2d9e1c4ca212e7171033ee1f5d99aad1e9695e",
+  "prompt_sha256": {
+    "no-clause": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010",
+    "own-meaning+exception": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010",
+    "own-meaning": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010",
+    "words-outside": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010",
+    "three-examples": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010",
+    "adverb-examples": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010"
+  },
+  "tool_schema_sha256": "84a4f6793469414dcc5cf681e45e60fb1d9b360fde41a019b9209c30bb14f5b9",
+  "started_at": null,
+  "finished_at": "2026-09-29T22:11:23+00:00",
+  "requests_planned": 900,
+  "total_cost_usd": 2.90422,
+  "max_usd": 3.5,
+  "spent_before_usd": 0.0,
+  "refused_by_ceiling": 0,
+  "package_version": null,
+  "prices": {
+    "claude-haiku-4-5-20251001": {
+      "input_usd_per_mtok": 1.0,
+      "output_usd_per_mtok": 5.0,
+      "checked": "2026-09-29"
+    },
+    "claude-sonnet-5": {
+      "input_usd_per_mtok": 2.0,
+      "output_usd_per_mtok": 10.0,
+      "checked": "2026-09-29"
+    }
+  },
+  "measured_by": "the app's private harness on 2026-09-29, in two rounds: five arms (750 requests, finished 22:03:39 UTC), then one arm (150 requests, finished 22:11:23 UTC). Not sent by this package; the cost is the sum of the rows",
+  "request_check": "every recorded user turn is rebuilt byte for byte by this package from the case file, and the system prompt and tool schema the private harness sent are prompt/system.txt and prompt/tool_schema.json, pinned by sha256 (tests/test_phrases_record.py)",
+  "ceiling_note": "one $3.50 ceiling covered both rounds and 150 further requests ($0.48) on the app's own regression sentences, which quote books still in copyright and are not published here",
+  "verified_with_package_version": "0.2.0",
+  "rounds": {
+    "1": [
+      "no-clause",
+      "own-meaning+exception",
+      "own-meaning",
+      "words-outside",
+      "three-examples"
+    ],
+    "2": [
+      "adverb-examples"
+    ]
+  },
+  "private_arm_names": {
+    "no-clause": "control-u1",
+    "own-meaning+exception": "w1",
+    "own-meaning": "w2",
+    "words-outside": "w3",
+    "three-examples": "w4",
+    "adverb-examples": "w5"
+  },
+  "sent_system_prompt_sha256": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010",
+  "sent_tool_schema_sha256": "84a4f6793469414dcc5cf681e45e60fb1d9b360fde41a019b9209c30bb14f5b9",
+  "amended_checks": {
+    "hizo-hizo-caso": "after round one had been scored and before round two was run; failures_as_first_scored in each row holds the verdict under the check as first written"
+  }
+}

@@ -29,7 +29,7 @@ from .request import MAX_TOKENS
 
 #: Input tokens assumed for a call before any answer has been seen. The same request counts
 #: differently per model, because the tokenizers differ. Measured on the runs in `results/`:
-#: up to 2,860 input tokens on Haiku, and up to 3,346 on Sonnet for requests that Haiku counted
+#: up to 2,959 input tokens on Haiku, and up to 3,346 on Sonnet for requests that Haiku counted
 #: at 2,695 at most. Each entry sits above the heaviest request `cases/` can produce, so the
 #: first calls in flight are never reserved low.
 WORST_CASE_INPUT_TOKENS = {

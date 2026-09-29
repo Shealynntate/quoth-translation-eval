@@ -1,0 +1,561 @@
+[
+  {
+    "id": "alta-en-voz-alta",
+    "selection": "alta",
+    "sentence": "Después habló en voz alta.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "loud",
+      "high",
+      "raised"
+    ],
+    "mustExclude": [
+      "aloud",
+      "out loud",
+      "loudly",
+      "voice"
+    ],
+    "note": "La letra escarlata (Nathaniel Hawthorne). Phrase word: 'alta' has a sense of its own inside the fixed phrase 'en voz alta' (aloud, out loud); the phrase's meaning is the absorb.",
+    "earlier": "—¿Qué significa la letra, madre mía? y ¿por qué la llevas tú? y ¿por qué se lleva el ministro la mano al corazón? —¿Qué le diré? —se preguntó Ester a sí misma. —¡No! Si este ha de ser el precio del afecto de mi hija, no puedo comprarlo a tal costo."
+  },
+  {
+    "id": "primera-por-primera-vez",
+    "selection": "primera",
+    "sentence": "Stapleton estaba conmigo cuando lo oí por primera vez.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "first"
+    ],
+    "mustExclude": [
+      "time"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Phrase word: 'primera' has a sense of its own inside the fixed phrase 'por primera vez' (for the first time); the phrase's meaning is the absorb.",
+    "earlier": "—Era difícil poder precisar de dónde partía. —Aumentaba y disminuía con el viento. ¿No está de aquel lado la Gran Ciénaga de Grimpen? —Sí, de aquel lado. —Bueno, de allí salía. Digame, Watson, ¿no cree usted que ha sido el aullido de un sabueso? Vea que no soy un niño. No debe tener temor de decir la verdad."
+  },
+  {
+    "id": "mayor-hijo-mayor",
+    "selection": "mayor",
+    "sentence": "Al hijo mayor correspondióle el molino, al segundo el asno y al menor el gato.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "elder",
+      "eldest",
+      "older",
+      "oldest",
+      "great",
+      "big",
+      "larg",
+      "major",
+      "main"
+    ],
+    "mustExclude": [
+      "son"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Phrase word: 'mayor' has a sense of its own inside the fixed phrase 'hijo mayor' (eldest son); the phrase's meaning is the absorb.",
+    "earlier": "MAESE ZAPIRON o EL GATO CON BOTAS Dejó un molinero por todo patrimonio a sus tres hijos, el molino, el asno y el gato. El reparto fue cosa breve, sin necesidad de la intervención del notario ni del procurador, quienes se hubieran comido muy pronto la pobre herencia."
+  },
+  {
+    "id": "fria-a-sangre-fria",
+    "selection": "fría",
+    "sentence": "A sangre fría ha violado la santidad de un corazón humano.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "cold",
+      "cool",
+      "chill"
+    ],
+    "mustExclude": [
+      "blood",
+      "coldly",
+      "coolly",
+      "callous",
+      "ruthless",
+      "deliberate"
+    ],
+    "note": "La letra escarlata (Nathaniel Hawthorne). Phrase word: 'fría' has a sense of its own inside the fixed phrase 'A sangre fría' (in cold blood); the phrase's meaning is the absorb.",
+    "earlier": "¿Me quieres perdonar? —Sí, te perdono, Ester,—replicó el ministro al fin, con hondo acento salido de un abismo de tristeza, pero sin cólera. —Te perdono ahora de todo corazón. Así nos perdone Dios a entrambos. No somos los más negros pecadores del mundo, Ester. ¡Hay uno que es aun peor que este contaminado ministro del altar! La venganza de ese anciano ha sido más negra que mi pecado."
+  },
+  {
+    "id": "nuevo-de-nuevo",
+    "selection": "nuevo",
+    "sentence": "Después, asumiendo, una expresión de interés, dejó sobre la mesa el cigarrillo, y llevándose el bastón a la ventana lo examinó de nuevo con un lente.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "new",
+      "fresh",
+      "novel"
+    ],
+    "mustExclude": [
+      "again",
+      "anew",
+      "afresh",
+      "once more",
+      "renew"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Phrase word: 'nuevo' has a sense of its own inside the fixed phrase 'de nuevo' (again); the phrase's meaning is the absorb.",
+    "earlier": "Me sentía orgulloso, también, al pensar que dominaba ya a tal punto el sistema de mi amigo, que había llegado a aplicarlo en aquel caso en una forma que había merecido su completa aprobación. Holmes me sacó el bastón de las manos y se puso a examinarlo a simple vista por unos minutos."
+  },
+  {
+    "id": "completo-por-completo",
+    "selection": "completo",
+    "sentence": "Al ver a este rapaz fue cuando comprendí por completo mi verdadera situación.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "complete",
+      "whole",
+      "full",
+      "entire",
+      "total"
+    ],
+    "mustExclude": [
+      "completely",
+      "entirely",
+      "wholly",
+      "fully",
+      "totally",
+      "altogether",
+      "utterly",
+      "thorough"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Phrase word: 'completo' has a sense of its own inside the fixed phrase 'por completo' (completely, fully); the phrase's meaning is the absorb.",
+    "earlier": "Al mismo tiempo le había buscado un muchachuelo, como de mi edad, en calidad de aprendiz, con el cual mi madre no necesitaba de más servidumbre durante mi ausencia."
+  },
+  {
+    "id": "vez-otra-vez",
+    "selection": "vez",
+    "sentence": "El doctor dobló otra vez su periódico, y volvió a metérselo en el bolsillo.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "time",
+      "occasion",
+      "turn"
+    ],
+    "mustExclude": [
+      "again",
+      "another",
+      "once more",
+      "more",
+      "anew"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Phrase word: 'vez' has a sense of its own inside the fixed phrase 'otra vez' (again); the phrase's meaning is the absorb.",
+    "earlier": "Parece que el pariente más cercano del difunto es el señor Enrique Baskerville, si es que aún vive, hijo del segundo hermano de sir Carlos. Las últimas noticias que hay de este joven lo hacen en Norte América, y se han tomado ya las medidas del caso para comunicarle que los valiosos bienes de los Baskerville están a su disposición."
+  },
+  {
+    "id": "caso-en-todo-caso",
+    "selection": "caso",
+    "sentence": "Pero, en todo caso, creo que el dinero debería agregarse al título y a la propiedad.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "case",
+      "event",
+      "instance",
+      "matter"
+    ],
+    "mustExclude": [
+      "any case",
+      "anyway",
+      "anyhow",
+      "any rate",
+      "any event",
+      "all events",
+      "regardless"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Phrase word: 'caso' has a sense of its own inside the fixed phrase 'en todo caso' (in any case, anyway); the phrase's meaning is the absorb.",
+    "earlier": "—Sería el heredero de la propiedad, porque ésta está vinculada; y heredaría también el dinero, a menos que el propietario actual, que, por supuesto, puede hacer de él lo que quiera, dispusiese las cosas de otro modo en su testamento. Y ha hecho usted ya su testamento, sir Enrique? —No, señor Holmes, todavía no. No he tenido tiempo, porque sólo ayer he sabido cómo andaban las cosas."
+  },
+  {
+    "id": "pie-de-pie",
+    "selection": "pie",
+    "sentence": "Estaba de pie, delante de nosotros, en la actitud sumisa de un sirviente bien educado.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "foot",
+      "feet"
+    ],
+    "mustExclude": [
+      "stand",
+      "upright",
+      "erect",
+      "on his feet",
+      "on her feet",
+      "on their feet",
+      "on one's feet",
+      "on my feet"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Phrase word: 'pie' has a sense of its own inside the fixed phrase 'de pie' (standing); the phrase's meaning is the absorb.",
+    "earlier": "La sola idea de ello me hace la impresión de algo solemne. Vi que su rostro oscuro se encendía de infantil entusiasmo al mirar a todos lados. La luz daba de lleno en el sitio en que él estaba, pero largas sombras bajaban arrastrándose sobre los muros y flotaban encima de él como un dosel negro. Barrymore había vuelto, después de llevar las valijas a nuestros aposentos."
+  },
+  {
+    "id": "modo-de-modo-que",
+    "selection": "modo",
+    "sentence": "El hombre vio venir a lo lejos a su anciano padre y se apresuró a ocultar el plato para no tener que darle, de modo que sólo bebió un trago y se volvió en seguida.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "way",
+      "manner",
+      "mode",
+      "fashion",
+      "means"
+    ],
+    "mustExclude": [
+      "so that",
+      "therefore",
+      "thus",
+      "hence",
+      "consequently"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Phrase word: 'modo' has a sense of its own inside the fixed phrase 'de modo que' (so that, so); the phrase's meaning is the absorb.",
+    "earlier": "El hijo ingrato Un día estaba un hombre sentado con su mujer a la puerta de su casa, y se hallaban comiendo con mucho gusto un pollo, el primero que les habían dado aquel año las gallinas."
+  },
+  {
+    "id": "fin-por-fin",
+    "selection": "fin",
+    "sentence": "Un hermoso día, vimos por fin la señal esperada.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "end",
+      "finish",
+      "aim",
+      "purpose",
+      "goal"
+    ],
+    "mustExclude": [
+      "final",
+      "last",
+      "eventual",
+      "at length",
+      "in the end",
+      "ultimately"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Phrase word: 'fin' has a sense of its own inside the fixed phrase 'por fin' (at last, finally); the phrase's meaning is the absorb.",
+    "earlier": "Y con esto pareció como aliviado de un gran peso. —Ahora, prosiguió, voy a contarte cómo pasaron los sucesos, ni más ni menos. Yo estaba a bordo del buque de Flint cuando éste sepultó aquí su tesoro. Él se vino a tierra con seis hombres, grandes, fuertes. Permanecieron aquí cerca de una semana, y nosotros, entre tanto, allá afuera. esperando. anclados en el fondeadero, en su viejo buque el Walrus."
+  },
+  {
+    "id": "lugar-en-lugar-de",
+    "selection": "lugar",
+    "sentence": "—Pero, ¿por qué una cita en el parque, en lugar de una visita en la casa?",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "place",
+      "spot",
+      "site",
+      "location"
+    ],
+    "mustExclude": [
+      "instead",
+      "rather",
+      "in place of",
+      "in lieu"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Phrase word: 'lugar' has a sense of its own inside the fixed phrase 'en lugar de' (instead of); the phrase's meaning is the absorb.",
+    "earlier": "No tengo ningún motivo para abochornarme de eso. Quería que él me ayudara. Estaba segura de que, si podía tener una entrevista con él, conseguiría lo que necesitaba. Por esto le pedí que me viera. —Pero, ¿por qué a aquella hora? —Porque acababa de saber que se iba a Londres al día siguiente, y que su ausencia duraría meses. Había también razones que me impedían poder estar allá más temprano."
+  },
+  {
+    "id": "tras-una-tras-otra",
+    "selection": "tras",
+    "sentence": "Estas mujeres eran todas aquellas con quienes Barba-Azul había casado, a las que había degollado una tras otra.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "after",
+      "behind",
+      "following"
+    ],
+    "mustExclude": [
+      "another",
+      "the other",
+      "by one",
+      "in turn",
+      "succession"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Phrase word: 'tras' has a sense of its own inside the fixed phrase 'una tras otra' (one after another); the phrase's meaning is the absorb.",
+    "earlier": "Al principio nada vio, debido a que las ventanas estaban cerradas. Al cabo de algunos instantes comenzaron a destacarse los objetos y notó que el suelo estaba completamente cubierto de sangre cuajada y que en ella se reflejaban los cuerpos de varias mujeres muertas y sujetas a las paredes."
+  },
+  {
+    "id": "sin-sin-embargo",
+    "selection": "Sin",
+    "sentence": "Sin embargo, no era su destino el ir muy lejos.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "without"
+    ],
+    "mustExclude": [
+      "however",
+      "nevertheless",
+      "nonetheless",
+      "yet",
+      "still"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Phrase word: 'Sin' has a sense of its own inside the fixed phrase 'Sin embargo' (however); the phrase's meaning is the absorb.",
+    "earlier": "Por lo que hace a Vd. Silver, Vd. ha sido hasta hoy un camarada mío, pero desde hoy ya no lo es Vd. Si me mata como a un perro ¡qué importa! moriré cumpliendo con mi deber. ¿Conque ha hecho Vd. matar al pobre Alán, no? ¡Pues máteme también a mí, si puede, le desafío a ello! Y al decir esto aquel bravo y leal muchacho, volvió la espalda al cocinero y se puso en marcha, dirigiéndose hacia la playa."
+  },
+  {
+    "id": "echo-echo-a-correr",
+    "selection": "echó",
+    "sentence": "Y al decir esto el hombre de vanguardia echó a correr.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "threw",
+      "throw",
+      "cast",
+      "flung",
+      "fling",
+      "toss",
+      "hurl",
+      "start",
+      "began",
+      "begin",
+      "put"
+    ],
+    "mustExclude": [
+      "run",
+      "ran",
+      "broke into",
+      "dash",
+      "sprint",
+      "fled",
+      "flee",
+      "bolt",
+      "race"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Phrase word: 'echó' has a sense of its own inside the fixed phrase 'echó a correr' (ran off, broke into a run); the phrase's meaning is the absorb.",
+    "earlier": "Ese bosque, tan tranquilo y silencioso a la sazón, debió resonar entonces con los alaridos de terror y de agonía de las víctimas sacrificadas, alaridos que el terror hacía resonar a los oídos de mi imaginación. Nos encontrábamos, en aquel momento, al borde del boscaje. —¡Hurra, muchachos! , gritó Merry; ¡todos juntos!"
+  },
+  {
+    "id": "hizo-hizo-caso",
+    "selection": "hizo",
+    "sentence": "Pero de poco la sirvió gritar lo más alto que pudo, pues la princesa no la hizo caso, corrió hacia su casa y olvidó muy pronto a la pobre rana, que tuvo que quedarse en su fuente.",
+    "group": "phrase-word",
+    "mustIncludeAny": [
+      "made",
+      "did",
+      "make",
+      "paid",
+      "pay"
+    ],
+    "mustExclude": [
+      "attention",
+      "heed",
+      "ignor",
+      "notice",
+      "listen",
+      "mind"
+    ],
+    "amended": {
+      "date": "2026-09-29",
+      "reason": "In 'paid her no attention', 'paid' is the word standing where 'hizo' stands, which is what a substitutable gloss is. So 'paid' and 'pay' moved from the exclusions to the accepted answers; 'attention' and 'heed' still fail. Amended after the first round had been scored and before the second round was run.",
+      "before": {
+        "mustIncludeAny": [
+          "made",
+          "did",
+          "make"
+        ],
+        "mustExclude": [
+          "attention",
+          "heed",
+          "ignor",
+          "notice",
+          "listen",
+          "mind",
+          "paid",
+          "pay"
+        ]
+      }
+    },
+    "note": "Cuentos escogidos (Brothers Grimm). Phrase word: 'hizo' has a sense of its own inside the fixed phrase 'no la hizo caso' (paid her no attention); the phrase's meaning is the absorb. Its check was amended after the first round; see 'amended'.",
+    "earlier": "La rana, en cuanto hubo recibido la promesa, hundió su cabeza en el agua, bajó al fondo y un rato después apareció de nuevo, llevando en la boca la bola, que arrojó en la yerba. La hija del rey, llena de alegría en cuanto vio su hermoso juguete, le cogió y se marchó con él saltando. —¡Espera, espera! —la gritó la rana—. Llévame contigo; yo no puedo correr como tú."
+  },
+  {
+    "id": "x-embargo-sin-embargo-1",
+    "selection": "embargo",
+    "sentence": "Su cuerpo no presentaba, sin embargo, lesión de ninguna clase.",
+    "group": "exception",
+    "mustIncludeAny": [
+      "however",
+      "nevertheless",
+      "nonetheless",
+      "yet",
+      "still",
+      "though",
+      "even so",
+      "all the same"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Exception: 'embargo' has no sense of its own outside 'sin embargo', so the phrase's meaning (however) is the right answer.",
+    "earlier": "Sir Carlos estaba tendido boca abajo, con los brazos abiertos, los dedos enterrados en la arena y las facciones de tal manera convulsionadas, a causa de alguna emoción violenta, que casi no me habría sido posible jurar su identidad."
+  },
+  {
+    "id": "x-embargo-sin-embargo-2",
+    "selection": "embargo",
+    "sentence": "No tenía el aspecto de un verdadero marino y sin embargo había en él no sé qué aire de gente del mar.",
+    "group": "exception",
+    "mustIncludeAny": [
+      "however",
+      "nevertheless",
+      "nonetheless",
+      "yet",
+      "still",
+      "though",
+      "even so",
+      "all the same"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Exception: 'embargo' has no sense of its own outside 'sin embargo', so the phrase's meaning (however, yet) is the right answer.",
+    "earlier": "Era éste un individuo pálido y encanijado, en cuya mano izquierda faltaban dos dedos y que, aunque llevaba también su cuchilla al cinto, no tenía, ni con mucho, el aspecto de un hombre de armas tomar. Yo siempre estaba en acecho de marineros de una sola pierna, o de dos, pero el que acababa de aparecérseme era para mí un enigma."
+  },
+  {
+    "id": "x-menudo-a-menudo",
+    "selection": "menudo",
+    "sentence": "Fue sin duda uno de esos meteoros que el observador nocturno puede ver a menudo, que se inflaman, brillan y se extinguen rápidamente en las regiones del espacio.",
+    "group": "exception",
+    "mustIncludeAny": [
+      "often",
+      "frequent"
+    ],
+    "note": "La letra escarlata (Nathaniel Hawthorne). Exception: 'menudo' has no sense of its own outside 'a menudo', so the phrase's meaning (often) is the right answer.",
+    "earlier": "—Entonces, y allí ante el Juez Supremo, continuó, tendremos que comparecer tu madre, tú y yo, al mismo tiempo. Pero la luz del sol de este mundo no habrá de vernos reunidos. Perla empezó a reir de nuevo. Pero antes de que el Sr. Dimmesdale hubiera terminado de hablar, brilló una luz en toda la extensión del oscuro horizonte."
+  },
+  {
+    "id": "x-repente-de-repente",
+    "selection": "repente",
+    "sentence": "De repente sintió como debilidad, y cayó muerta en el suelo.",
+    "group": "exception",
+    "mustIncludeAny": [
+      "sudden",
+      "abrupt",
+      "all at once"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Exception: 'repente' has no sense of its own outside 'De repente', so the phrase's meaning (suddenly) is the right answer.",
+    "earlier": "Los demás criados se pusieron a murmurar. —¡Qué atrevimiento! —dijeron—. ¡Ha quemado la camisa de boda del rey! Pero el joven rey insistió todavía. —Sin duda tiene sus razones; dejadle obrar, pues su lealtad es a toda prueba. Celebráronse las bodas. Hubo un gran baile, y la novia comenzó a bailar. Desde aquel momento el fiel Juan no la perdió de vista."
+  },
+  {
+    "id": "x-hurtadillas-a-hurtadillas",
+    "selection": "hurtadillas",
+    "sentence": "Se deslizaba a hurtadillas, con pisadas tan cautelosas y aspecto tan precavido como un ladrón que penetra en una alcoba donde hay un hombre medio dormido, o quizá completamente despierto, con el objeto de hurtar el tesoro mismo que este hombre guarda como la niña de sus ojos.",
+    "group": "exception",
+    "mustIncludeAny": [
+      "stealth",
+      "furtive",
+      "secret",
+      "sly",
+      "sneak",
+      "covert",
+      "surreptitious"
+    ],
+    "note": "La letra escarlata (Nathaniel Hawthorne). Exception: 'hurtadillas' has no sense of its own outside 'a hurtadillas', so the phrase's meaning (stealthily) is the right answer.",
+    "earlier": "Entonces, después de escudriñar minuciosamente el alma del joven clérigo, y de descubrir muchos materiales preciosos en la forma de elevadas aspiraciones por el bienestar de la raza humana, amor ferviente de las almas, sentimientos puros, piedad natural fortalecida por la meditación y el estudio, e iluminada por la revelación,—todo lo cual, si bien oro de muchos quilates, no tenía valor ninguno para el escudriñador médico,—éste, aunque desalentado, empezaba sus investigaciones en otra dirección."
+  },
+  {
+    "id": "x-reojo-de-reojo",
+    "selection": "reojo",
+    "sentence": "Ya noté al Doctor urgiéndote para que te fugases; lo he visto de reojo, sí señor, y he visto que tú no has querido; lo he visto tan claro como si lo hubiera oído.",
+    "group": "exception",
+    "mustIncludeAny": [
+      "corner",
+      "sidelong",
+      "askance",
+      "sideways",
+      "sidewise",
+      "side-eye",
+      "side glance"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Exception: 'reojo' has no sense of its own outside 'de reojo', so the phrase's meaning (out of the corner of the eye) is the right answer.",
+    "earlier": "CAPÍTULO XXXI EN BUSCA DEL TESORO—EL DIRECTORIO DE FLINT —Jim, díjome Silver en cuanto que estuvimos solos: si yo salvé tu vida, tú has salvado también la mía y te ofrezco no olvidarlo."
+  },
+  {
+    "id": "p-cuchillo",
+    "selection": "cuchillo",
+    "sentence": "El pobre hombre comprendió que no había que andarse con bromas con la ogra; tomó un enorme cuchillo y subió al cuarto de la pequeña Aurora.",
+    "group": "plain-word",
+    "mustIncludeAny": [
+      "knife"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Plain word: 'cuchillo' is in no fixed phrase.",
+    "earlier": "Algunos días después fue a la casa de campo y por la noche dijo a su mayordomo: —Mañana quiero comerme a Aurora. —¡Ah! señora. exclamó el mayordomo. —Lo quiero, contestó la reina con tono de ogra que desea devorar carne fresca, y quiero comerla en salsa picante."
+  },
+  {
+    "id": "p-llave",
+    "selection": "llave",
+    "sentence": "Mucho después, cuando empezaba ya a dormirme, oí chirriar una llave en alguna cerradura, pero no pude precisar en qué parte del edificio.",
+    "group": "plain-word",
+    "mustIncludeAny": [
+      "key"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Plain word: 'llave' is in no fixed phrase.",
+    "earlier": "Pude ver su rostro rígido por ansiosa expectativa; parecía estar sondeando las tinieblas del páramo. Durante unos minutos se mantuvo así, observando atentamente, y de pronto, hizo oir un sordo gruñido, y con gesto contrariado apagó la luz. Inmediatamente emprendí la retirada, y a poco de estar en mi cuarto sentí otra vez sus pasos furtivos en dirección al fondo de la casa."
+  },
+  {
+    "id": "p-rompio",
+    "selection": "rompió",
+    "sentence": "El joven la cogió y la rompió en su rodilla como una paja; tiró los pedazos a un lado.",
+    "group": "plain-word",
+    "mustIncludeAny": [
+      "broke",
+      "break",
+      "snap",
+      "smash",
+      "shatter"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Plain word: 'rompió' is in no fixed phrase.",
+    "earlier": "Entonces dijo a su padre: —Veo que en casa no hay lo que necesito para comer. Buscadme una barra de hierro, bastante fuerte, que no se rompa encima de mi rodilla y me iré a correr el mundo. El labrador estaba admirado. Enganchó los dos caballos al carro y trajo de la fragua una barra de hierro tan grande y tan gruesa que apenas podían arrastrarla los dos caballos."
+  },
+  {
+    "id": "p-pequena",
+    "selection": "pequeña",
+    "sentence": "En la alcoba de los esposos había una ventana pequeña, cuyas vistas daban a un hermoso huerto, en el cual se encontraban toda clase de flores y legumbres.",
+    "group": "plain-word",
+    "mustIncludeAny": [
+      "small",
+      "little",
+      "tiny"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Plain word: 'pequeña' is in no fixed phrase.",
+    "earlier": "Ruiponche Había en una ocasión un matrimonio que deseaba hacía mucho tiempo tener un hijo, hasta que al fin dio la mujer esperanzas de que el Señor quería se cumpliesen sus deseos."
+  },
+  {
+    "id": "p-cansada",
+    "selection": "cansada",
+    "sentence": "—Yo no estoy cansada, madre,—replicó la niña; pero tú puedes sentarte si quieres, y entretanto contarme un cuento.",
+    "group": "plain-word",
+    "mustIncludeAny": [
+      "tired",
+      "weary",
+      "fatigued",
+      "exhausted"
+    ],
+    "note": "La letra escarlata (Nathaniel Hawthorne). Plain word: 'cansada' is in no fixed phrase.",
+    "earlier": "Era ciertamente un encanto dudoso, que comunicaba al carácter de la niña cierto brillo metálico y duro. Necesitaba un dolor profundo para humanizarse y hacerse capaz de sentir compasión. Pero Perla tenía tiempo sobrado para ello. —Ven, hija mía,—dijo Ester;—vamos a sentarnos en el bosque y a descansar un rato."
+  },
+  {
+    "id": "p-nieve",
+    "selection": "nieve",
+    "sentence": "Las niñas le abrieron las puertas a la aurora, y él se fue al bosque trotando sobre la nieve.",
+    "group": "plain-word",
+    "mustIncludeAny": [
+      "snow"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Plain word: 'nieve' is in no fixed phrase.",
+    "earlier": "El oso las dejaba hacer cuanto querían, pero cuando veía que sus juegos iban demasiado lejos, les decía: —Dejadme vivir, no vayáis a matar a vuestro pretendiente. Cuando fueron a acostarse, le dijo la madre: —Quédate ahí; pasa la noche delante de la lumbre, pues por lo menos estarás al abrigo del frío y del mal tiempo."
+  },
+  {
+    "id": "p-pasos",
+    "selection": "pasos",
+    "sentence": "El rumor de unos pasos precipitados rompió el silencio del páramo.",
+    "group": "plain-word",
+    "mustIncludeAny": [
+      "step",
+      "footfall",
+      "tread"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Plain word: 'pasos' is in no fixed phrase.",
+    "earlier": "—Nos alejamos demasiado—dijo Holmes. —No debemos dar lugar a que el hombre sea alcanzado antes de que llegue adonde estamos. Tenemos que quedarnos aquí a toda costa. Holmes se puso de rodillas y pegó el oido al suelo. — Gracias a Dios! Me parece que lo oigo."
+  },
+  {
+    "id": "p-arbol",
+    "selection": "árbol",
+    "sentence": "Por la noche se acostó bajo un árbol, con hambre, y se levantó al día siguiente sin que se le hubiera quitado.",
+    "group": "plain-word",
+    "mustIncludeAny": [
+      "tree"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Plain word: 'árbol' is in no fixed phrase.",
+    "earlier": "—Dios en su paraíso debe ser feliz al verme tan alegre. Pasaron así los dos primeros días; pero al tercero, como no veían el fin de su camino, el sastre, que había consumido todo su pan; vio desvanecerse toda su alegría; sin embargo, sin perder el ánimo, se encomendó a su buenaventura y a la misericordia de Dios."
+  }
+]

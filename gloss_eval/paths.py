@@ -18,6 +18,8 @@ TOOL_SCHEMA = PROMPT_DIR / "tool_schema.json"
 CLITIC_TURN = PROMPT_DIR / "clitic_turn.txt"
 HABER_TURN = PROMPT_DIR / "haber_turn.txt"
 EARLIER_TURN = PROMPT_DIR / "earlier_turn.txt"
+SINGLE_WORD_TURN = PROMPT_DIR / "single_word_turn.txt"
+PHRASE_CLAUSES_DIR = PROMPT_DIR / "phrase_clauses"
 
 
 def display(path: Path) -> str:

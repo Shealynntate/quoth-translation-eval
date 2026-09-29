@@ -1,0 +1,1 @@
+This selection is a single word. The words around it are outside the selection and must not appear in the translation, even when they form a fixed phrase with it. Translate the word itself and report the phrase separately in the expression fields: "larga" in "a la larga" is "long", never "in the long run" or "the long run".

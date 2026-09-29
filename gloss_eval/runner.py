@@ -1,22 +1,24 @@
 """Running a grid of (case, arm, trial) requests through the spend ceiling.
 
-Two experiments:
+Three experiments:
 
     marks      arms "unmarked" and "marked": the same system prompt; the sentence is sent plain,
                or with the selection wrapped in « » at its real position.
     guidance   arms "no-guidance", "rule", "rule+example", "second-example" and "turn-clause":
                a ladder of guidance for a pronoun attached to an auxiliary (see `guidance`); the
                sentence is always sent marked.
+    phrases    arms "no-clause", "own-meaning+exception", "own-meaning", "words-outside",
+               "three-examples" and "adverb-examples": one clause each on a single plain word
+               (see `phrases`); the sentence is always sent marked.
 
-In both, a single-word selection whose case carries an `earlier` passage sends it, as the app
+In all three, a single-word selection whose case carries an `earlier` passage sends it, as the app
 does (see `request.user_turn`).
 
 Every trial becomes one row of `trials.jsonl`, written as soon as the trial finishes so a crash
 loses nothing already bought. The fields of a row:
 
-    experiment     "marks" or "guidance"
-    arm            "unmarked" or "marked"; or "no-guidance", "rule", "rule+example",
-                   "second-example" or "turn-clause"
+    experiment     "marks", "guidance" or "phrases"
+    arm            one of the experiment's arms
     case_id        the case's id
     trial          1-based trial number within the (case, arm) cell
     model          the model id the request named
@@ -34,6 +36,15 @@ loses nothing already bought. The fields of a row:
     error          null, the request's error, or "refused: spend ceiling" for a call never sent
     at             when the trial finished, UTC ISO 8601
 
+A phrases row also carries the fixed phrase the model reported, because whether the phrase
+reaches the reader is part of that experiment:
+
+    phrase         the `expression` field as returned, or null when none was reported
+    phrase_meaning the `expressionMeaning` field as returned, or null
+
+A recorded run whose case file has since had a check amended also carries, in every row,
+`failures_as_first_scored`: the failures under the checks in force when the row was scored.
+
 A failed request is a failed trial: the app would have shown the reader nothing. A call refused
 by the ceiling is neither a pass nor a failure, because nothing was asked; the report counts
 those separately.
@@ -50,7 +61,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Protocol
 
-from . import __version__, guidance, paths, pricing, report
+from . import __version__, guidance, paths, phrases, pricing, report
 from .client import NoToolCall
 from .ledger import REFUSED, SpendLedger
 from .marks import has_marks
@@ -60,6 +71,7 @@ from .scoring import failures
 ARMS = {
     "marks": ("unmarked", "marked"),
     "guidance": guidance.ARMS,
+    "phrases": phrases.ARMS,
 }
 
 
@@ -85,15 +97,18 @@ class Job:
 def system_prompts(experiment: str) -> dict[str, str]:
     """The system prompt each arm of `experiment` sends."""
     shipped = system_prompt()
-    if experiment == "marks":
-        return {arm: shipped for arm in ARMS["marks"]}
-    return guidance.build_all(shipped)
+    if experiment == "guidance":
+        return guidance.build_all(shipped)
+    return {arm: shipped for arm in ARMS[experiment]}
 
 
 def arm_turn(experiment: str, arm: str, case: dict) -> str:
     """The user turn `arm` sends for `case`. The marks arms send the app's turn; the guidance
-    arms send it without the haber clause, except the arm that tests that clause."""
+    arms send it without the haber clause, except the arm that tests that clause; the phrases
+    arms send the app's turn with their own single-word clause."""
     selection, sentence, earlier = case["selection"], case["sentence"], case.get("earlier")
+    if experiment == "phrases":
+        return marked_turn(selection, sentence, earlier, single_word=phrases.clause(arm))
     if arm == "unmarked":
         return user_turn(selection, sentence, earlier)
     with_clause = experiment == "marks" or arm in guidance.HABER_CLAUSE_ARMS
@@ -102,7 +117,10 @@ def arm_turn(experiment: str, arm: str, case: dict) -> str:
 
 def plan(experiment: str, cases: list[dict], model: str, trials: int) -> list[Job]:
     """Every request of the grid, case by case, so a ceiling stop leaves whole cases unbought
-    rather than every case short of trials."""
+    rather than every case short of trials. A phrases case that repeats a clause's own example
+    stops the plan here, before anything is sent."""
+    if experiment == "phrases":
+        phrases.refuse_example_cases(cases)
     systems = system_prompts(experiment)
     jobs = []
     for case in cases:
@@ -137,6 +155,9 @@ def _row(job: Job, **fields) -> dict:
         "cost_usd": 0.0,
         "error": None,
     }
+    if job.experiment == "phrases":
+        row["phrase"] = None
+        row["phrase_meaning"] = None
     row.update(fields)
     row["at"] = _now()
     return row
@@ -163,9 +184,19 @@ def run_trial(job: Job, client: Client, ledger: SpendLedger) -> dict:
     raw = tool_input.get("translation")
     translation = raw if isinstance(raw, str) else ""
     failed = failures(job.case, translation)
+    extra = {}
+    if job.experiment == "phrases":
+        extra = {"phrase": _reported(tool_input, "expression"),
+                 "phrase_meaning": _reported(tool_input, "expressionMeaning")}
     return _row(job, translation=translation, leaked_marks=has_marks(translation),
                 tool_input=tool_input, failures=failed, passed=not failed,
-                input_tokens=tokens_in, output_tokens=tokens_out, cost_usd=cost)
+                input_tokens=tokens_in, output_tokens=tokens_out, cost_usd=cost, **extra)
+
+
+def _reported(tool_input: dict, field: str) -> str | None:
+    """A text field of the answer as returned, or None when it is missing or blank."""
+    value = tool_input.get(field)
+    return value if isinstance(value, str) and value.strip() else None
 
 
 def run_grid(jobs: list[Job], client: Client, ledger: SpendLedger, trials_path: Path,
@@ -228,5 +259,5 @@ def execute(experiment: str, cases_path: Path, cases: list[dict], model: str, tr
         "prices": pricing.price_table(),
     }
     (out_dir / "run.json").write_text(json.dumps(run_info, indent=2) + "\n", encoding="utf-8")
-    (out_dir / "report.md").write_text(report.build(rows, run_info), encoding="utf-8")
+    (out_dir / "report.md").write_text(report.build(rows, run_info, cases), encoding="utf-8")
     return run_info, rows

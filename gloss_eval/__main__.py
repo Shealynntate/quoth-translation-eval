@@ -1,4 +1,4 @@
-"""Command line: python -m gloss_eval <validate|marks|guidance|replay>."""
+"""Command line: python -m gloss_eval <validate|marks|guidance|phrases|replay>."""
 
 from __future__ import annotations
 
@@ -33,7 +33,8 @@ def _parser() -> argparse.ArgumentParser:
     validate.set_defaults(handler=cmd_validate)
 
     for name, blurb in (("marks", "unmarked against marked user turns"),
-                        ("guidance", "five rungs of guidance for a pronoun on an auxiliary")):
+                        ("guidance", "five rungs of guidance for a pronoun on an auxiliary"),
+                        ("phrases", "six single-word clauses for a word inside a fixed phrase")):
         run = sub.add_parser(name, help=blurb)
         run.add_argument("--cases", type=Path, required=True, help="case file")
         run.add_argument("--model", choices=list(pricing.MODELS), required=True)

@@ -12,6 +12,11 @@ A case is one selection in one sentence, plus the checks its English must pass:
     note            free text (source and what the case is built to catch)
     earlier         the passage before the sentence, sent with a single-word selection as the
                     app sends it
+    group           what kind of word the case tests, for experiments that compare kinds:
+                    "phrase-word" (a word with its own sense inside a fixed phrase),
+                    "exception" (a word with no sense outside its phrase) or "plain-word"
+    amended         the record of a check changed after answers had been scored: the date, the
+                    reason, and under "before" the checks as they were first written
 
 A case needs at least one check. Validation is strict because a malformed case does not crash a
 run, it silently measures something else: a selection that occurs twice may be marked at the
@@ -27,7 +32,10 @@ from .marks import SPAN_CLOSE, SPAN_OPEN, mark_span
 
 REQUIRED = ("id", "selection", "sentence")
 LIST_CHECKS = ("mustInclude", "mustIncludeAny", "mustExclude")
-KNOWN = frozenset((*REQUIRED, *LIST_CHECKS, "mustNotBe", "note", "earlier"))
+CHECKS = (*LIST_CHECKS, "mustNotBe")
+KNOWN = frozenset((*REQUIRED, *CHECKS, "note", "earlier", "group", "amended"))
+GROUPS = ("phrase-word", "exception", "plain-word")
+AMENDED_FIELDS = frozenset(("date", "reason", "before"))
 
 
 class CaseError(ValueError):
@@ -78,11 +86,34 @@ def _validate_case(case: dict, cid: str) -> None:
     if count != 1:
         raise CaseError(f"[{cid}] selection occurs {count} times in the sentence, not once")
     _validate_checks(case, cid)
+    if "group" in case and case["group"] not in GROUPS:
+        raise CaseError(f"[{cid}] 'group' must be one of {', '.join(GROUPS)}")
+    if "amended" in case:
+        _validate_amended(case["amended"], cid)
     mark_span(sentence, selection)
 
 
+def _validate_amended(amended: object, cid: str) -> None:
+    if not isinstance(amended, dict) or set(amended) != AMENDED_FIELDS:
+        raise CaseError(f"[{cid}] 'amended' must hold exactly date, reason and before")
+    for field in ("date", "reason"):
+        if not isinstance(amended[field], str) or not amended[field]:
+            raise CaseError(f"[{cid}] 'amended.{field}' must be a non-empty string")
+    before = amended["before"]
+    if not isinstance(before, dict) or not before or set(before) - set(CHECKS):
+        raise CaseError(f"[{cid}] 'amended.before' must hold only checks")
+    _validate_checks(before, f"{cid} as first written")
+
+
+def checks_as_first_written(case: dict) -> dict:
+    """`case` with the checks it had before any amendment."""
+    if "amended" not in case:
+        return case
+    return {**{k: v for k, v in case.items() if k not in CHECKS}, **case["amended"]["before"]}
+
+
 def _validate_checks(case: dict, cid: str) -> None:
-    declared = [f for f in (*LIST_CHECKS, "mustNotBe") if f in case]
+    declared = [f for f in CHECKS if f in case]
     if not declared:
         raise CaseError(f"[{cid}] declares no checks")
     for field in LIST_CHECKS:

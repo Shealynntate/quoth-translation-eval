@@ -2,8 +2,8 @@
 
 The scores in each `report.md` come from substring checks. A substring check can pass an
 answer that breaks the rule, when the answer fails in a way the check did not name. So every
-passing answer in `results/` was read against its sentence in a second pass, and the ones
-below were judged to break the rule although they passed.
+passing answer of experiments 1 and 2 was read against its sentence in a second pass, and the
+ones below were judged to break the rule although they passed.
 
 The second pass was done by a model, Claude Fable 5.1, which is a stronger model than the two
 under test. It is a review, not the score: every judged row is listed here with its reason, so
@@ -14,8 +14,12 @@ content inside the selection that is missing. Two kinds of answer were read as b
 and left as passes: a subject pronoun English needs for a finite verb ("she put on an
 apron"), and a lone function word ("for fear that").
 
-The checks were not edited after the answers were seen, so the recorded scores stand as
-scored. The tables in the README give both counts.
+The checks of experiments 1 and 2 were not edited after the answers were seen, so the recorded
+scores stand as scored. The tables in the README give both counts.
+
+Experiment 3, in `2026-09-29-phrases-haiku`, had no such pass. Its answers were read one by one
+by a model, which led to one amended check, but its passes were not judged row by row as below.
+The README gives its counts as first scored and under the amended check.
 
 ## 2026-09-29-marks-haiku
 

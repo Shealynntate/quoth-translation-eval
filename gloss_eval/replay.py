@@ -46,7 +46,8 @@ def replay(out_dir: Path) -> Replay:
     cases_path = paths.REPO_ROOT / run_info["cases_file"]
     if not cases_path.exists():
         raise FileNotFoundError(f"the case file named in run.json was not found at {cases_path}")
-    by_id = {c["id"]: c for c in case_files.load(cases_path)}
+    cases = case_files.load(cases_path)
+    by_id = {c["id"]: c for c in cases}
     recorded = read_rows(out_dir / "trials.jsonl")
     rows, changed = [], []
     for old in recorded:
@@ -55,7 +56,7 @@ def replay(out_dir: Path) -> Replay:
             changed.append(f"{old['case_id']} / {old['arm']} / trial {old['trial']}: recorded "
                            f"{_verdict(old['passed'])}, now {_verdict(new['passed'])}")
         rows.append(new)
-    (out_dir / "report.md").write_text(report.build(rows, run_info), encoding="utf-8")
+    (out_dir / "report.md").write_text(report.build(rows, run_info, cases), encoding="utf-8")
     return Replay(rows, changed, sha256_file(cases_path) != run_info["cases_sha256"])
 
 

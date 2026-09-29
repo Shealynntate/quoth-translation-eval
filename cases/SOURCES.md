@@ -1,9 +1,9 @@
 # Sources of the case sentences
 
-Every sentence and earlier passage in `marks.json` and `haber.json` is quoted from one of the five
-Spanish translations below. The quotes come from a cleaned copy of each text, in which spelling
-was normalised and transcription errors were repaired, so a quote can differ in small ways from
-the source page.
+Every sentence and earlier passage in `marks.json`, `haber.json` and `phrases.json` is quoted from
+one of the five Spanish translations below. The quotes come from a cleaned copy of each text, in
+which spelling was normalised and transcription errors were repaired, so a quote can differ in
+small ways from the source page.
 
 A recorded basis of "worldwide" means the translation was judged to meet two conditions: it
 was published in 1930 or earlier, and its translator died in 1945 or earlier. These notes have
