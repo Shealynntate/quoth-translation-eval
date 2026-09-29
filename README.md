@@ -86,7 +86,8 @@ arm, all on Haiku 4.5, which is the model that serves a single-word tap.
 | second-example | the above and a second worked example | 50/80 (63%) | 50/80 (63%) |
 | turn-clause | the rule and one example, and a clause in the request itself | 76/80 (95%) | 76/80 (95%) |
 
-- **A rule alone did worse than saying nothing.** 15% against 23%.
+- **A rule alone did no better than saying nothing, and may have done worse.** 15% against
+  23%, a gap of six trials in eighty.
 - **A worked example taught its own string and its near neighbours.** The example in the prompt
   is "haberla". With it, "haberlos" and "habiéndolo" passed 5 in 5, while three reflexive
   sentences ("haberse repuesto", "habiéndose puesto", "haberme quejado") stayed at 0 in 5.
