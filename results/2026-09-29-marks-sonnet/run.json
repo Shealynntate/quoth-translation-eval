@@ -1,0 +1,33 @@
+{
+  "command": "python -m gloss_eval marks --cases cases/marks.json --model sonnet --trials 5 --max-usd 1.9 --workers 4",
+  "experiment": "marks",
+  "model": "claude-sonnet-5",
+  "trials": 5,
+  "cases_file": "cases/marks.json",
+  "cases_sha256": "b9d1737298ece60e537b087f20c1c77da810c371c28fe9bb70a6d8ed8a3c09b7",
+  "prompt_sha256": {
+    "unmarked": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010",
+    "marked": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010"
+  },
+  "tool_schema_sha256": "84a4f6793469414dcc5cf681e45e60fb1d9b360fde41a019b9209c30bb14f5b9",
+  "started_at": "2026-09-29T19:58:27+00:00",
+  "finished_at": "2026-09-29T20:00:09+00:00",
+  "requests_planned": 190,
+  "total_cost_usd": 1.44876,
+  "max_usd": 1.9,
+  "spent_before_usd": 0.0,
+  "refused_by_ceiling": 0,
+  "package_version": "0.1.0",
+  "prices": {
+    "claude-haiku-4-5-20251001": {
+      "input_usd_per_mtok": 1.0,
+      "output_usd_per_mtok": 5.0,
+      "checked": "2026-09-29"
+    },
+    "claude-sonnet-5": {
+      "input_usd_per_mtok": 2.0,
+      "output_usd_per_mtok": 10.0,
+      "checked": "2026-09-29"
+    }
+  }
+}

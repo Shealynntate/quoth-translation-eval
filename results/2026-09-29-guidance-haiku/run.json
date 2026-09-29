@@ -1,0 +1,36 @@
+{
+  "command": "python -m gloss_eval guidance --cases cases/haber.json --model haiku --trials 5 --max-usd 1.9 --workers 4",
+  "experiment": "guidance",
+  "model": "claude-haiku-4-5-20251001",
+  "trials": 5,
+  "cases_file": "cases/haber.json",
+  "cases_sha256": "a3b6f68f04aca8d13a76c9c4cf049f964a525e8659da3be72b4ae92a5d7fa13d",
+  "prompt_sha256": {
+    "no-guidance": "9ebc8be922604db32bb850521240bdffc79d6cbade09ec2c6fdd648ffe78e040",
+    "rule": "3a6bc0581c3c8be2fda90b396624882c4e1b41ff51d052a4c7e956d290d17261",
+    "rule+example": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010",
+    "second-example": "9dca326f3ea5243d5aa2f4020dbc76847e3c7310302d0f1e039d76bdf3829ad3",
+    "turn-clause": "8afa46d34bb411ee71ffc0bdf8595e106730286acf341ebb84bf67d6893e5010"
+  },
+  "tool_schema_sha256": "84a4f6793469414dcc5cf681e45e60fb1d9b360fde41a019b9209c30bb14f5b9",
+  "started_at": "2026-09-29T20:00:28+00:00",
+  "finished_at": "2026-09-29T20:03:18+00:00",
+  "requests_planned": 400,
+  "total_cost_usd": 1.318815,
+  "max_usd": 1.9,
+  "spent_before_usd": 0.0,
+  "refused_by_ceiling": 0,
+  "package_version": "0.1.0",
+  "prices": {
+    "claude-haiku-4-5-20251001": {
+      "input_usd_per_mtok": 1.0,
+      "output_usd_per_mtok": 5.0,
+      "checked": "2026-09-29"
+    },
+    "claude-sonnet-5": {
+      "input_usd_per_mtok": 2.0,
+      "output_usd_per_mtok": 10.0,
+      "checked": "2026-09-29"
+    }
+  }
+}

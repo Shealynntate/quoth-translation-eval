@@ -1,0 +1,215 @@
+[
+  {
+    "id": "rey-tan-grande-speech-tag",
+    "selection": "tan grande —dijo el rey",
+    "sentence": "—El amor que me ha hecho concebir es tan grande —dijo el rey— que si todas las hojas de los árboles fueran lenguas, no bastarían para explicarle.",
+    "mustInclude": [
+      "said",
+      "king"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Drop: a speech tag inside the span, set off by paired dashes."
+  },
+  {
+    "id": "caperucita-dijo-el-lobo",
+    "selection": "Caperucita roja, dijo el lobo",
+    "sentence": "—Soy vuestra nieta, Caperucita roja, dijo el lobo imitando la voz de la niña.",
+    "mustInclude": [
+      "said",
+      "wolf"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Drop: a speech tag set off by a comma, with no closing dash."
+  },
+  {
+    "id": "baronet-tono-resuelto-tag",
+    "selection": "—dijo el baronet en tono resuelto",
+    "sentence": "—Ahora, caballeros—dijo el baronet en tono resuelto,—creo que he hablado bastante sobre lo poco que sé.",
+    "mustInclude": [
+      "said",
+      "baronet"
+    ],
+    "mustExclude": [
+      "gentlemen"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Drop: the span opens at a dialogue dash; a whole-sentence answer would carry 'gentlemen'."
+  },
+  {
+    "id": "lobo-echo-a-correr-subject",
+    "selection": "El lobo echó a correr tanto como pudo",
+    "sentence": "El lobo echó a correr tanto como pudo, tomando el camino más corto, y la niña fuese por el más largo entreteniéndose en coger avellanas, en correr detrás de las mariposas y en hacer ramilletes con las florecillas que hallaba a su paso.",
+    "mustInclude": [
+      "wolf"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Drop: a noun subject before an idiomatic predicate."
+  },
+  {
+    "id": "marido-se-vistio-subject",
+    "selection": "El marido se vistió rápidamente y echó a correr",
+    "sentence": "El marido se vistió rápidamente y echó a correr, como un insensato.",
+    "mustInclude": [
+      "husband"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Drop: a noun subject before two verbs."
+  },
+  {
+    "id": "sin-embargo-miradas-connective",
+    "selection": "sin embargo, las miradas se volvieron fijas",
+    "sentence": "Pronto, sin embargo, las miradas se volvieron fijas y penetrantes.",
+    "mustIncludeAny": [
+      "however",
+      "nevertheless",
+      "nonetheless",
+      "even so",
+      "but ",
+      "though",
+      "yet"
+    ],
+    "note": "La letra escarlata (Nathaniel Hawthorne). Drop: a leading connective, with the span starting mid-sentence."
+  },
+  {
+    "id": "por-lo-tanto-disponte-connective",
+    "selection": "Por lo tanto disponte a separarte de tu hija",
+    "sentence": "Por lo tanto disponte a separarte de tu hija, pues en breve vendrán por ella.",
+    "mustIncludeAny": [
+      "therefore",
+      "so ",
+      "so,",
+      "thus",
+      "hence",
+      "accordingly",
+      "consequently"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Drop: a leading connective the system prompt does not name."
+  },
+  {
+    "id": "temor-caballos-clause-tail",
+    "selection": "temor de que no asustase a los caballos",
+    "sentence": "Al cuarto año entró en una posada, cuyo dueño no quería recibirle ni aun en la caballeriza, por temor de que no asustase a los caballos.",
+    "mustInclude": [
+      "horse"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Drop: a noun together with its subordinate clause."
+  },
+  {
+    "id": "ojos-muy-grandes-noun",
+    "selection": "ojos muy grandes",
+    "sentence": "—Abuelita, tenéis los ojos muy grandes.",
+    "mustInclude": [
+      "eye"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Drop: a noun before an intensified adjective."
+  },
+  {
+    "id": "como-el-mejor-holmes-vocative",
+    "selection": "como el mejor, señor Holmes",
+    "sentence": "Sé aguantar las bromas como el mejor, señor Holmes, pero esta vez se han pasado un poco de la raya.",
+    "mustInclude": [
+      "holmes"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Drop: a vocative at the end of the span."
+  },
+  {
+    "id": "delantal-absorb-plata",
+    "selection": "se puso un delantal",
+    "sentence": "Limpióse el rostro, las manos y los brazos; se puso un delantal de plata y dio comienzo a su tarea.",
+    "mustExclude": [
+      "silver"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Absorb: the completing phrase just past the span."
+  },
+  {
+    "id": "rogerio-arrodillo-absorb-both",
+    "selection": "Rogerio se arrodilló a su lado con aspecto",
+    "sentence": "El viejo Rogerio se arrodilló a su lado con aspecto sombrío, desconcertado, con un rostro en el cual parecía haberse extinguido la vida.",
+    "mustExclude": [
+      "old ",
+      "gloom",
+      "somber",
+      "sombre",
+      "bewilder",
+      "disconcert"
+    ],
+    "note": "La letra escarlata (Nathaniel Hawthorne). Absorb: material on both sides of a mid-sentence fragment."
+  },
+  {
+    "id": "tiro-contra-la-pared-absorb-both",
+    "selection": "la cogió y la tiró contra la pared con todas",
+    "sentence": "La princesa se incomodó entonces mucho, la cogió y la tiró contra la pared con todas sus fuerzas.",
+    "mustExclude": [
+      "princess",
+      "might",
+      "strength",
+      "angry",
+      "annoyed",
+      "vexed",
+      "irritat"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: the subject before the span and an idiom tail after it."
+  },
+  {
+    "id": "acababa-de-absorb-verb",
+    "selection": "acababa de",
+    "sentence": "Dióse aviso al hijo del rey de que acababa de llegar una gran princesa desconocida y corrió a recibirla.",
+    "mustExclude": [
+      "arriv",
+      "princess"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Absorb: a short governing phrase pulls in the verb that follows."
+  },
+  {
+    "id": "a-punto-de-absorb-verb",
+    "selection": "a punto de",
+    "sentence": "Entre tanto, y puesto que le veo a Vd. a punto de encender su pipa, voy a tomarme la libertad de hacer otro tanto.",
+    "mustExclude": [
+      "light",
+      "pipe",
+      "smok"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Absorb: a short governing phrase pulls in the verb that follows."
+  },
+  {
+    "id": "le-dio-absorb-beso",
+    "selection": "le dio",
+    "sentence": "Perla le dio un beso en la boca.",
+    "mustExclude": [
+      "kiss",
+      "mouth",
+      "lips"
+    ],
+    "note": "La letra escarlata (Nathaniel Hawthorne). Absorb: a pronoun-plus-verb span pulls in its object from outside."
+  },
+  {
+    "id": "generoso-dijo-muchacho-whole-sentence",
+    "selection": "generoso —dijo el muchacho—, voy a dejar",
+    "sentence": "—Ya que eres tan generoso —dijo el muchacho—, voy a dejar de tocar; pero no dejaré de hacerte cumplida justicia; bailas con la mayor perfección.",
+    "mustExclude": [
+      "justice",
+      "danc",
+      "perfect"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: the span crosses a dialogue dash, inviting a whole-sentence answer."
+  },
+  {
+    "id": "fria-sangre-fria-absorb",
+    "selection": "fría",
+    "sentence": "—Se trata de un crimen, Watson... de un crimen refinado, alevoso, a sangre fría.",
+    "mustInclude": [
+      "cold"
+    ],
+    "mustExclude": [
+      "blood"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Absorb: an adjective inside a set pairing takes its partner noun.",
+    "earlier": "Unas cuantas estrellas empañadas centelleaban en un cielo color violado. —La última pregunta, Holmes—dije, levantándome. —Seguramente, no hay ya necesidad de secretos entre usted y yo. ¿Qué significa todo esto? ¿Qué se propone él? La voz de Holmes se hizo profunda al contestarme. —Se trata de un crimen, Watson."
+  },
+  {
+    "id": "tras-uno-tras-otro-particle",
+    "selection": "tras",
+    "sentence": "Y los volvió a colgar uno tras otro.",
+    "mustExclude": [
+      "another"
+    ],
+    "mustNotBe": "one after another",
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: a particle answered with the whole phrase's meaning.",
+    "earlier": "Pero como no se movían y la lumbre no hacía ningún efecto en sus cuerpos, les dijo: —Mirad lo que hacéis, porque si no vuelvo a colgaros. Pero los muertos no le oían, callaban y continuaban sin hacer movimiento alguno. Incomodado, les dijo entonces: —Ya que no queréis hacerme caso, después que me he propuesto ayudaros, no quiero que os calentéis más."
+  }
+]

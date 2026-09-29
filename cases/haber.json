@@ -1,0 +1,212 @@
+[
+  {
+    "id": "haberlo-sabido",
+    "selection": "haberlo",
+    "sentence": "—Nadie podía haberlo sabido.",
+    "mustExclude": [
+      "know",
+      "knew"
+    ],
+    "note": "El sabueso de los Baskerville (Arthur Conan Doyle). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Era un sobre común, de color agrisado. La dirección: “Sir Enrique Baskerville, Northumberland Hotel” , estaba escrita con letra muy tosca; el sello postal decía: “Charing Cross” y tenía la fecha y la hora de la noche anterior. ¿Quién sabía que usted iba a alojarse en el Northumberland Hotel? — preguntó Holmes, clavando los ojos en sir Enrique Baskerville."
+  },
+  {
+    "id": "haberle-desobedecido",
+    "selection": "haberle",
+    "sentence": "Al oir estas palabras arrojóse llorando a los piés de su esposo y pidióle perdon con todas las demostraciones de un verdadero arrepentimiento por haberle desobedecido.",
+    "mustExclude": [
+      "disobey",
+      "obey"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Después de varias dilaciones, forzoso fue entregar la llave. Miróla Barba-Azul y dijo a su mujer: —¿A qué se debe que haya sangre en esta llave? —Lo ignoro, contestó más pálida que la muerte. —¿No lo sabes? replicó Barba-Azul; yo lo sé. Has querido penetrar en el gabinete. Pues bien, entrarás en él e irás a ocupar tu puesto entre las mujeres que allí has visto."
+  },
+  {
+    "id": "haberlos-dejado",
+    "selection": "haberlos",
+    "sentence": "Eso era lo que influía, pensé yo, el tener al Capitán herido; raciocinio que me hizo reprocharme una vez más el haberlos dejado en aquella situación peligrosa, con tan pocas personas hábiles para montar la guardia.",
+    "mustExclude": [
+      "left",
+      "leav"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "\" jamás sonó más agradablemente a mi oído. Por lo pronto, en lo que no cabía la menor duda era en que en mi campo la vigilancia era de todo punto detestable. Si Silver y sus hombres fueran en aquel instante los que estuvieran cayendo sobre mis amigos, de seguro que ni uno solo vería levantarse la luz del nuevo día."
+  },
+  {
+    "id": "haberse-lavado",
+    "selection": "haberse",
+    "sentence": "A las dos horas, poco más o menos, se levantó de la cama el posadero, y después de haberse lavado, cogió la toalla para secarse; pero se arañó el rostro con el alfiler, que le hizo una señal encarnada que le cogía de oreja a oreja.",
+    "mustExclude": [
+      "wash"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "El ánade, que se había quedado en el corral para dormir a cielo raso, se levantó al oírlos, y metiéndose por un arroyo que pasaba por debajo de la pared, salió mucho más pronto que había entrado la noche anterior cuando venía corriendo la posta."
+  },
+  {
+    "id": "haberme-robado",
+    "selection": "haberme",
+    "sentence": "—Soy un príncipe, las dijo, ese infame enano me había convertido en oso, después de haberme robado todos mis tesoros; me había condenado a recorrer los bosques bajo esta forma y no podía verme libre más que con su muerte.",
+    "mustExclude": [
+      "rob",
+      "stole",
+      "stol",
+      "taken",
+      "took"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Y zampáoslas en nombre de Dios. Pero el oso sin escucharle, dio a aquella malvada criatura un golpe con su pata y cayó al suelo muerta. Las niñas se habían salvado, pero el oso les gritó: —¿Blancanieve? ¿Rojarosa? No tengáis miedo, esperadme. Reconocieron su voz y se detuvieron, y cuando estuvo cerca de ellas, cayó de repente su piel de oso y vieron a un joven vestido con un traje dorado."
+  },
+  {
+    "id": "haberme-quejado",
+    "selection": "haberme",
+    "sentence": "Lo que la causaba no era un rumor que pueda llamarse, de por sí, agradable en manera alguna, y aún recuerdo haberme quejado de él en más de una ocasión; pero en aquella lo percibí como si hubiera sido el eco de una música deliciosa.",
+    "mustExclude": [
+      "complain",
+      "grumbl",
+      "protest"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Para aumentar mis seguridades me puse a recorrer el trayecto que me separaba del ángulo del reducto, andando sobre las rodillas y las manos, sin hacer el más pequeño ruido. Cuando ya estuve bastante cerca, mi corazón se dilató con una expansión de gozo indecible."
+  },
+  {
+    "id": "haberte-oido",
+    "selection": "haberte",
+    "sentence": "—Me pareció haberte oído decir que conocías nuestro reglamento, dijo Silver desdeñosamente.",
+    "mustExclude": [
+      "hear"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Pero, entre tanto, ¿no me haces el favor de pasarme ese hachón? Esta pipa no arde bien. —Basta una vez más, dijo Jorge. Se acabó el tiempo en que enredaba Vd. con su charla a esta tripulación. Vd. se tiene por muy gracioso, a lo que entendemos; pero, por ahora, ya no es Vd. nadie, con lo cual haría Vd. muy bien en bajarse de ese barril y ayudarnos a votar a otro jefe."
+  },
+  {
+    "id": "haberte-ocultado",
+    "selection": "haberte",
+    "sentence": "¡Yo que creía haberte ocultado a todo el mundo, y me has engañado!",
+    "mustExclude": [
+      "hid",
+      "conceal",
+      "kept"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Convinieron en que iría todas las noches, pues la hechicera iba por el día, la cual no notó nada hasta que la preguntó Ruiponche una vez: —Dime, abuelita ¿ porque mis ropas ya no me quedan? ,cada ves son más pequeñas —¡Ah, maldita! la contestó la hechicera. ¡Qué es lo que oigo!"
+  },
+  {
+    "id": "haberle-cogido",
+    "selection": "haberle",
+    "sentence": "El sastre recordó entonces lo que acostumbraba a decirle su madre cuando era niño y le daba azotes por haberle cogido quitándola alguna golosina:",
+    "mustExclude": [
+      "caught",
+      "catch",
+      "found"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "El zapatero le dijo: —Te daré un pedazo de pan, pero a condición de que he de sacarte el ojo derecho. El desgraciado, obligado a aceptar este horrible contrato, para conservar la vida, lloró con los dos ojos por última vez, y se ofreció a su verdugo, que le sacó el ojo derecho con la punta de su cuchillo."
+  },
+  {
+    "id": "haberle-librado",
+    "selection": "haberle",
+    "sentence": "Al verlas desaparecer, dio un salto de alegría, y con las lágrimas en los ojos agradeció a Dios haberle librado de aquella carga tan incómoda, sin que fuese culpa suya.",
+    "mustExclude": [
+      "free",
+      "deliver",
+      "rid",
+      "reliev",
+      "liberat",
+      "releas",
+      "spar",
+      "saved"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Se acercó como pudo a un charco que se hallaba próximo, para descansar y beber un trago de agua, y por no hacerse daño con las piedras al sentarse, las colocó a su lado junto a la laguna: echándose después de bruces comenzó a beber, mas sin querer tropezó en las piedras que rodaron hasta llegar al fondo."
+  },
+  {
+    "id": "haberse-repuesto",
+    "selection": "haberse",
+    "sentence": "Después de haberse repuesto algo, cogió la llave, cerró la puerta y subió a su cuarto para dominar su agitación, sin que lo lograse, pues era extraordinaria.",
+    "mustExclude": [
+      "recover",
+      "compos",
+      "collect",
+      "regain",
+      "calm",
+      "recuperat",
+      "rall"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Estas mujeres eran todas aquellas con quienes Barba-Azul había casado, a las que había degollado una tras otra. Creyó morir de miedo ante tal espectáculo y se le cayó la llave del gabinete que acababa de sacar de la cerradura."
+  },
+  {
+    "id": "haberse-formado",
+    "selection": "haberse",
+    "sentence": "con una voz de viejo, temblorosa, alta, que parecía haberse formado y roto en las barras del cabrestante.",
+    "mustExclude": [
+      "form",
+      "shap",
+      "made",
+      "tune",
+      "train"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Absorb: a pronoun attached to the auxiliary infinitive pulls in the participle that follows.",
+    "earlier": "Todavía lo recuerdo, paseando su mirada investigadora en torno del cobertizo, silbando mientras examinaba y prorrumpiendo, en seguida, en aquella antigua canción marina que tan a menudo le oí cantar después: \"Son quince los que quieren el cofre de aquel muerto Son quince ¡yo—ho—hó! son quince ¡viva el rom! \""
+  },
+  {
+    "id": "habiendole-herido",
+    "selection": "habiéndole",
+    "sentence": "Pero bien muerto estaba para tales maniobras, habiéndole herido una de mis balas y ahogádose en seguida, por lo cual en poco tiempo ya no fue sino alimento de peces en el mismo sitio en que había meditado acabar conmigo.",
+    "mustExclude": [
+      "wound",
+      "hit",
+      "struck",
+      "hurt",
+      "injur",
+      "shot"
+    ],
+    "note": "La isla del tesoro (Robert Louis Stevenson). Absorb: a pronoun attached to the auxiliary gerund pulls in the participle that follows.",
+    "earlier": "Tan luego como el agua se serenó pude verle tendido sobre la limpia y brillante arena del fondo, y como protegido por la sombra que los costados del buque arrojaban sobre el agua. Uno o dos peces azotaron su cuerpo al paso. Una vez u otra con el ondear del agua parecía como si se moviera un poco, como si estuviese tratando de levantarse."
+  },
+  {
+    "id": "habiendolo-tocado",
+    "selection": "habiéndolo",
+    "sentence": "La Hada escogió una entre los tres, dándole la preferencia por su barba; y habiéndolo tocado con la varilla, se transformó en un fornido cochero con gruesos bigotes.",
+    "mustExclude": [
+      "touch",
+      "tap",
+      "struck",
+      "strik"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Absorb: a pronoun attached to the auxiliary gerund pulls in the participle that follows.",
+    "earlier": "Pensando estaba de qué haría un cochero, cuando la Cenicienta dijo: — Veré si ha quedado algun raton en la ratonera y le convertiremos en cochero. —Buena idea, contestóle. Vé a mirarlo. La Cenicienta volvió con la ratonera en la que había tres grandes ratas."
+  },
+  {
+    "id": "habiendoles-dado",
+    "selection": "habiéndoles",
+    "sentence": "Preocupado estaba sin saber qué hacerse; pero habiéndoles dado su padre un pedazo de pan a cada uno para desayunarse, se dijo que podía reemplazar las piedrecitas tirando migas por donde pasasen; y pensado esto, guardose el pan en el bolsillo.",
+    "mustExclude": [
+      "given",
+      "gave",
+      "giv",
+      "hand"
+    ],
+    "note": "Cuentos de hadas (Charles Perrault). Absorb: a pronoun attached to the auxiliary gerund pulls in the participle that follows.",
+    "earlier": "No lograron hablar de su plan con tanto sigilo que no les oyera Meñiquín, quien resolvió tomar sus medidas como antes las había tomado; pero a pesar de haber madrugado mucho para ir a recoger piedrecitas blancas, no pudo realizar su idea porque la puerta estaba cerrada con doble vuelta de llave."
+  },
+  {
+    "id": "habiendose-puesto",
+    "selection": "Habiéndose",
+    "sentence": "Habiéndose puesto en camino juntos encontraron un hormiguero.",
+    "mustExclude": [
+      "set",
+      "put",
+      "start",
+      "depart",
+      "gone",
+      "left",
+      "head",
+      "embark",
+      "road",
+      "way"
+    ],
+    "note": "Cuentos escogidos (Brothers Grimm). Absorb: a pronoun attached to the auxiliary gerund pulls in the participle that follows.",
+    "earlier": "Fue a buscarlos su hermano menor, al que llamaban el Simple, pero cuando los encontró comenzaron a burlarse de él, porque en su sencillez pretendía saber dirigirse en un mundo donde se habían perdido ellos dos, ellos dos que tenían mucho más talento que él."
+  }
+]

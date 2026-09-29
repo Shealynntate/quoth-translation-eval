@@ -1,0 +1,49 @@
+{
+  "properties" : {
+    "definition" : {
+      "description" : "For a single word: short English definition of this sense (under 12 words). Omit for phrases.",
+      "type" : "string"
+    },
+    "expression" : {
+      "description" : "Report ONLY for a FIXED multi-word unit the word belongs to — one Spanish says as a chunk, where swapping a component for a near-synonym gives something nobody says (\"prestar atención\", never \"dar atención\"): an idiom or fixed phrase, a discourse marker (\"sin embargo\", \"en realidad\"), a fixed compound noun (\"sala de estar\"), or a fixed quantity or degree expression (\"un sinfín de\"). Fixedness decides, not transparency: report the unit even when its word-for-word English is already natural. Do NOT report free combinations or verb+preposition government (e.g. \"soñar con\"), and do NOT report open-slot frames whose slots hold free content (\"tanto la cocina como la tarta\" instantiates tanto…como — put the frame in note instead). The whole expression, copied EXACTLY as it appears in the sentence — identical words, accents, and conjugation (do NOT normalize to the infinitive or dictionary form). Omit for an ordinary standalone word.",
+      "type" : "string"
+    },
+    "expressionMeaning" : {
+      "description" : "English meaning of that expression as used here, SUBSTITUTABLE for exactly the words of the expression — never absorbing tense, subject, or a verb that follows it (\"volver a\" = \"to … again\", never \"to laugh again\"). The single best rendering — never two alternatives joined by \" / \" or a restating comma. Omit unless expression is reported.",
+      "type" : "string"
+    },
+    "formNote" : {
+      "description" : "How the word relates to its dictionary form, very short: tense/mood + person for conjugated verbs (\"imperfect, 3rd person singular\"), \"plural\"/\"feminine\" for inflected nouns/adjectives. Omit if it IS the dictionary form or a phrase.",
+      "type" : "string"
+    },
+    "lemma" : {
+      "description" : "Dictionary form (infinitive for verbs, masculine singular for nouns/adjectives). For a verb standing without its pronoun, the PLAIN infinitive, never the reflexive (detuvo → detener, not detenerse), unless the verb exists only pronominally (quejarse). A past participle used as an adjective takes the INFINITIVE when it only names the verb's action (colgada → colgar, cerrada → cerrar); it keeps its own masculine singular ONLY when it has a settled sense of its own (educado \"polite\", parecido \"similar\", detenido \"careful\"). Omit if identical or a phrase.",
+      "type" : "string"
+    },
+    "note" : {
+      "description" : "One short note ONLY when genuinely helpful: idiom meaning, false friend, register. Usually omit.",
+      "type" : "string"
+    },
+    "partOfSpeech" : {
+      "description" : "One lowercase word (noun, verb, adjective…). Omit for phrases.",
+      "type" : "string"
+    },
+    "senses" : {
+      "description" : "At most two OTHER common senses of this word a learner would meet in modern prose, each 1-4 words and DISTINCT from the translation already given. Return an EMPTY ARRAY when there is nothing to add — phrases, proper names, and words with essentially one sense. Never archaic, technical, or rare dictionary tails — only senses worth recognizing on the next page.",
+      "items" : {
+        "type" : "string"
+      },
+      "maxItems" : 2,
+      "type" : "array"
+    },
+    "translation" : {
+      "description" : "English translation as used in the sentence. Concise: 1-4 words for a word; for a phrase, fluent English that covers ALL of it, dropping none of its words. The single best rendering — never two alternatives joined by \" / \" or a restating comma.",
+      "type" : "string"
+    }
+  },
+  "required" : [
+    "translation",
+    "senses"
+  ],
+  "type" : "object"
+}
