@@ -1,11 +1,12 @@
-# gloss-eval
+# Quoth translation eval
 
 Measures whether a language model translates exactly the words a reader selected, and nothing
 else.
 
 [Quoth](https://lectura-323fd.web.app) is an iOS app for reading books in Spanish. Tap a word or
-drag across a phrase and it shows the English for that selection, written by Claude. This
-repository is the evaluation harness behind that feature. It holds:
+drag across a phrase and it shows the English for that selection, written by Claude. That short
+English is called a gloss. This repository is the evaluation harness behind the feature. It
+holds:
 
 - the app's real system prompt, tool schema and request format, in `prompt/`
 - 35 test sentences from public-domain books, in `cases/`
