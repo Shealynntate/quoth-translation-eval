@@ -8,7 +8,7 @@ The failure: a tap on one word inside a fixed phrase comes back with the phrase'
                             for a word that means nothing outside its phrase
     own-meaning             the above without the exception
     words-outside           the neighbouring words are outside the selection, one worked example
-                            (the clause the app sends from version 1.0.1)
+                            (the clause the app sends from version 1.0.2)
     three-examples          own-meaning with two more worked examples, a noun and a verb
     adverb-examples         words-outside with examples of a preposition and one word that make
                             an adverb, the exception, and a demand that the phrase be reported

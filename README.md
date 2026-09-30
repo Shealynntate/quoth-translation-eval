@@ -173,8 +173,13 @@ second, which was scored under the amended check from the start (see
   reaches the reader.
 - **The exceptions and the plain words were never at risk.** The two exception failures are a
   sense miss ("on tiptoe" for "a hurtadillas") and one empty answer.
-- **What happened next.** The app sends the words-outside clause from version 1.0.1, as a partial
+- **What happened next.** The app sends the words-outside clause from version 1.0.2, as a partial
   fix, knowing it missed the bar.
+- **The adverbs were settled without the model.** The app carries a short list of fixed phrases
+  and finds them at the moment of a tap. For a word that keeps a meaning of its own inside one,
+  such as "nuevo" in "de nuevo", the app now answers from a table it carries: "new" above the
+  word, and "de nuevo: again" beside it. The model still answers "again", so the case stays in
+  the app's test set as a failure of the model. What changed is what the reader sees.
 - **On the app's own regression sentences**, which are not published here, the clause took one
   case from 0 to 4 passes in 5 and cost another case two of its five.
 
@@ -217,7 +222,7 @@ lines the app can add to a user turn:
 |---|---|---|
 | `clitic_turn.txt` | the selection is a pronoun and a verb, as in "le dio" | all three |
 | `haber_turn.txt` | the selection is haber with a pronoun attached, as in "haberlo" | all three, except the guidance arms that measure without it |
-| `single_word_turn.txt` | the selection is any other single word | experiment 3, as the words-outside arm; the app sends it from version 1.0.1 |
+| `single_word_turn.txt` | the selection is any other single word | experiment 3, as the words-outside arm; the app sends it from version 1.0.2 |
 | `earlier_turn.txt` | the selection is a single word; it carries the passage before the sentence | all three |
 
 `prompt/phrase_clauses/` holds the five clauses experiment 3 compared, one file per arm. The
@@ -321,7 +326,7 @@ The phrases run went in two rounds, 750 requests then 150, under one ceiling tha
   and Opus 5.5 reject it, so they cannot be measured with this request as it stands.
 - **The request has moved on.** Experiments 1 and 2 were run against the request as the app sent
   it before the single-word clause. Experiment 3 measured that clause, and the app sends it from
-  version 1.0.1.
+  version 1.0.2.
 - **Two marks cases carry a longer sentence than the app would send.** The app ends a sentence at
   every period, including the one in an abbreviation ("Vd.") or an ellipsis ("Watson..."). So
   `a-punto-de-absorb-verb` and `fria-sangre-fria-absorb` show the model more context than a

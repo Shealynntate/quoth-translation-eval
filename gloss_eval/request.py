@@ -68,7 +68,7 @@ def haber_clause() -> str:
 
 @cache
 def single_word_clause() -> str:
-    """The clause the app sends for a plain single word, from version 1.0.1 on."""
+    """The clause the app sends for a plain single word, from version 1.0.2 on."""
     return paths.SINGLE_WORD_TURN.read_text(encoding="utf-8")
 
 
